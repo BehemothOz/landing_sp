@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Righteous"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="section">
+      <div class="container">
+        <header class="header">
+          <img src="./img/gLogoWhiteText.svg" alt="logo" class="logo" />
+          <a href="#" class="link">Link</a>
+        </header>
+        <div class="main">
+          <h1 class="h1">Welcome to the galaxy of high cpm</h1>
+          <section class="main-form">
+            <div class="circle">
+              <form>
+                <label>Name 1<input type="text" /> </label>
+                <label>Name 2<input type="text" /> </label>
+                <label>Name 3<input type="text" /> </label>
+                <label>Name 4<input type="text" /> </label>
+              </form>
+            </div>
+          </section>
+          <div class="motivation">
+            <button class="btn-submit"></button> <i class="icon-arrow"></i>
+            <h2 class="h2">This is houston.<br />You arego for staging.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./pg.js"></script>
+    <script>
+      particleground(document.getElementById('section'), {
+        dotColor: 'rgba(0, 156, 219, 0.6)',
+        lineColor: 'transparent',
+        parallax: false,
+        minSpeedX: 0.2,
+        maxSpeedX: 0.5,
+        minSpeedY: 0.2,
+        maxSpeedY: 0.5,
+        density: 25000,
+        particleRadius: 4,
+        lineWidth: 0,
+        onInit: function() {
+          const canvas = this.querySelector('canvas.pg-canvas');
+          canvas.style.position = 'fixed';
+          canvas.style.zIndex = '-1';
+        }
+      });
+    </script>
+  </body>
+</html>
